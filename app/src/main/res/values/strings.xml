@@ -15,6 +15,7 @@
     <string name="welcome">Welcome</string>
     <string name="prompt_email">Email</string>
     <string name="accion_sign_in">Next</string>
+    <string name="account_google">Acceder con Google</string>
     <string name="tecnm">©TecNM</string>
     <string name="error_field_required">¡Error! Campo obligatorio</string>
     <string name="error_invalid_email">¡Error! email inválido</string>
@@ -27,5 +28,16 @@
     <string name="log_out">Log out</string>
     <string name="camera_menu">Camara</string>
     <string name="gallery_menu">Galeria</string>
+    <string name="name">Nombre</string>
+    <string name="last_name">Apellido</string>
+    <string name="cancel">Cancelar</string>
+    <string name="ok">Ok</string>
+
+    <string name="fail_register">Ocurrio un error al registrar usuario</string>
+    <string name="fail_to_update">Ocurrio un error al actualizar usuario</string>
+    <string name="action_search">Search</string>
+    <string name="report_user">Información de usuario</string>
+    <string name="edit">actualizar</string>
+    <string name="role">Rol</string>
 
 </resources>

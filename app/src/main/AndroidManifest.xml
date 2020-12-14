@@ -38,6 +38,10 @@
             android:name=".AddUser"
             android:theme="@style/Theme.UserKotlin.NoActionBar">
         </activity>
+        <activity
+            android:name=".DetailsUser"
+            android:theme="@style/Theme.UserKotlin.NoActionBar">
+        </activity>
 
     </application>
 

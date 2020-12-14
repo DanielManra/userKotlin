@@ -8,32 +8,30 @@ import android.view.WindowManager
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.userkotlin.databinding.AddUserBinding
+import com.example.userkotlin.databinding.DetailsUserBinding
 
-class AddUser: AppCompatActivity() {
-    private var user: UserViewModel? = null
+class DetailsUser: AppCompatActivity() {
+    private var user: UserViewModel? =null
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.add_user)
-
-        val _binding = DataBindingUtil.setContentView<AddUserBinding>(this, R.layout.add_user)
+        //setContentView(R.layout.details_user)
+        val _binding = DataBindingUtil.setContentView<DetailsUserBinding>(this, R.layout.details_user)
         user = UserViewModel(this, _binding)
-        _binding.userModel = user
+        _binding.details = user
         val window = this.window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-        window.statusBarColor = this.resources.getColor(R.color.colorBlue, null)
+        window.statusBarColor = this.resources.getColor(R.color.black, null)
     }
 
-    @RequiresApi(Build.VERSION_CODES.M)
-    override fun onActivityResult(
-        requestCode: Int,
-        resultCode: Int,
-        data: Intent?
-    ){
-        super.onActivityResult(requestCode, resultCode, data)
-        user!!.onActivityResult(requestCode, resultCode, data)
+    override fun onBackPressed() {
+        startActivity(
+        Intent(this, MainActivity::class.java)
+            .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+        )
+        finish()
     }
 }

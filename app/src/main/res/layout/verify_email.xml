@@ -93,6 +93,22 @@
                         app:backgroundTint="?attr/colorButtonNormal"
                         android:background="@drawable/borde_redondo"
                         android:onClick="@{emailModel::onClick}"/>
+
+                    <Button
+                        android:id="@+id/google_singIn_button"
+                        style="?android:textAppearanceSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/borde_redondo"
+                        android:drawableLeft="@mipmap/google_log_in"
+                        android:text="@string/account_google"
+                        android:textColor="@color/white"
+                        android:textStyle="bold">
+
+
+                    </Button>
+
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="match_parent"
